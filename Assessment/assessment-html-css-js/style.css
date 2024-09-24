@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    border: 3px solid red;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+body{
+    background-color: rgb(244, 244, 136);
+}
+h2{
+    text-align: center;
+}
+
+
+#fn,#em,#db,#cn,#gen,#mp{
+    text-align: right;
+}
+
+#success{
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: large;
+}
+
+#fnerror,#doberror,#generror{
+    color: red;
+}

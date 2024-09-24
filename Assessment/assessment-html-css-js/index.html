@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="success"></div>
+    <div class="container" id="form-container">
+        <form action="" id="form">
+            <h2><u>Customer Feedback Form</u></h2>
+            <div class="row mt-3 mb-3">
+                <div class="col-3" id="fn">
+                    <label for="fullName" class="form-label"><b>Full Name</b></label>
+                    <div id="fnerror"></div>
+                </div>
+                <div class="col-9">
+                    <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+                    <label for="FullName">Last Name, First Name, eg.: Cruise, Tom</label>
+
+                </div>
+            </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-3" id="em">
+                    <label for="email"><b>Email</b></label>
+                </div>
+                <div class="col-9">
+                    <input type="Email"class="form-control" id="email" placeholder="Email">
+                </div>
+            </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-3" id="db">
+                    <label for="DOB"><b>Date of Birth</b></label>
+                    <div id="doberror"></div>
+                </div>
+                <div class="col-9">
+                    <input type="date" class="form-control" id="DOB" placeholder="dd/mm/yyyy">
+                </div>
+            </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-3" id="cn">
+                    <label for="country"><b>Country</b></label>
+                </div>
+                <div class="col-9">
+                    <select id="country" class="form-select">
+                        <option value="India">India</option>
+                        <option value="UK">UK</option>
+                        <option value="USA">USA</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Russia">Russia</option>
+                        <option value="SriLanka">Srilanka</option>
+                        <option value="Japan">Japan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-3" id="gen">
+                    <label for="gender"><b>Gender</b></label>
+                    <div id="generror"></div>
+                </div>
+                <div class="col-3">
+                    <input type="radio" class="form-check-input" id="Female" name="gen" value="Female">
+                    <label class="form-check-label" for="Female">Female</label>
+                </div>
+                <div class="col-3">
+                    <input type="radio" class="form-check-input" id="Male"  name="gen" value="Male">
+                    <label class="form-check-label" for="Male">Male</label>
+                </div>
+                <div class="col-3">
+                    <input type="radio" class="form-check-input" id="Unknown" name="gen" value="Unknown">
+                    <label class="form-check-label" for="Unknown">Unknown</label>
+                </div>
+            </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-3" id="mp">
+                    <label for="Meal_Pref" ><b>Meal<br>Preference</b></label>
+                </div>
+                <div class="col-9">
+                    <input type="checkbox" class="form-check-input" id="Rice" name="Meal" value="Rice">
+                    <label class="form-check-label" for="Rice">Rice</label>
+                    <br>
+                    <input type="checkbox" class="form-check-input" id="Bread" name="Meal" value="Bread">
+                    <label class="form-check-label" for="Bread">Bread</label>
+                </div>
+            </div>
+            <div>
+                <div class="row mt-3 mb-3">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
+        </form>      
+    </div>
+    
+
+
+
+
+
+    <script src="script.js" defer></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

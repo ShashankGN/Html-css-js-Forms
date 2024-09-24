@@ -1,0 +1,10 @@
+.container{
+    border: 1px solid black;
+    width: 500px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(193, 221, 245);
+}
+body{
+    background-color: rgb(141, 171, 198);
+}

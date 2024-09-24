@@ -1,0 +1,109 @@
+cloud computing is pay as u use.
+shared responsibility model->buidling security,physical network security,physical computer security are carried on by the Azure
+Data,devices,user accounts->client management
+Authentication platform.application settings,network and firewall settings are carried on or taken care by both client and Azure together
+Mixed->cloud virtual machine responsibility
+Mixed/Shared->Cloud app service responsibility
+Mixed/Shared->Cloud Saas Responsibility
+OnPremises->all client responsibility
+Iaas->
+Paas->web apps,sequeldatabase
+Saas->office365
+
+public cloud->available for general public
+this is available to everyone who wants to use or purchase them
+private cloud->providing service over the internal network to only selected users
+ex:Stack HCI
+hybrid cloud->combines both private and public cloud
+
+VM->Region,OS(SKU/License),Instance size,Disktype/size,
+Bandwidth,backupstorage,reservation/savings plan,support agreement
+factors that affect the cost of VM
+
+Databases->API choice,Regions,Standardmodels/serverless,no. of operations/sec,consumed storage,optional dedicated gateway,backup storage
+factors that affect the cost of DB
+
+pay for time,pay for GB(storage),pay for operations(reading and writting to disks,pay per query to a database etc.)
+
+
+
+
+high availability->uptime for service or remain operational to users
+Scalability->accomodating according to increase or decrease in demand by adding or removing resources
+it makes the changes in the system design accordingly
+types of scaling:vertical scaling(it has limit and availability is not guranteed) also called scaling up or scaling down,Horizontal scaling also called scaling in or out(by adding servers,it has no limits,increase availability),
+Elasticity->the ability of system to quickly and easliy scale up or down according to requirement,autoscaling
+Availability,Reliability,Predcitibility->3 pillars of high quality platform service
+Reliability->ability of a system to perform its specified function without interuption and with high accuracy
+how good the results or output
+Predictibility->to forecasts and control the performance and behaviour and able to predict the future costs
+Security->protection from threats and hackers
+Governance->process of designing ,implementing and monitoring the cloud operations
+Managability->management of cloud and management in cloud
+of cloud->templates,automation,scaling,Monitoring and alerts,self healing
+in cloud->web portal,CLI and scripts,APIs,powershell
+
+
+Cloud services->IaaS,PaaS,Saas
+IaaS->Computing,Storage,Networking ex:windows server is in cloud,Azure VMs,Azure storage,Virtual Networking
+ex:GCE,Azure
+PaaS->middleware,development tools,database server plus IaaS
+Computing->ex:Azure app services
+Storage->ex:Azure SQL database
+networking->Azure Front door(load balancing,firewall etc.)
+ex:AWS,Google app engine
+Saas->cloud apps 
+ex:office365,onedrive,googledrive,dropbox,googledocs,skype,
+serverless->a pricing model,paying for service and not renting hardware
+ex:selecting the DTUs based on requirement in PaaS
+ex:depending on usage of service the price is varied(depends on the seconds the CPU is used) but there are no much option
+serverless services->functions,Container apps,kubernetrs,SQL database,CosmosDB
+
+
+
+regions->areas of world where Azure has datacentres
+region pairs->for backups
+Soverign regions->shld need permission or subscription,has some predefined compliance standard,Secret and higly important data
+Availabiltiy zones->physical separate locations within each Azure region
+Availability zones services->Zonal service,Zone redundant service,Always available service
+Zonal services->deploying in more than one zone
+Zone redundant service->Automatic Deployment across zones
+Always available services->always on, global services
+Ex:Azure portal,Azure front door
+Resources->Azure service that client can access ex:VMs,Storage accounts,Database
+Resource groups->grouping of resources
+Subscriptions->billing unit
+Management groups->contains one or more subscriptions,Azure policy
+
+
+
+Technical pillars of Azure->compute services,Networking services,storage services,Database services
+
+Azure computing services->executing code
+types->VM,VM scale set,Web apps,Azure Container instances,Azure container apps,Azure virtual desktop
+VM->virtual server,a single machine has been subdivided into slices
+Standalone server analogy->server which is isolated as single
+Virtualization->allowing multiple virtual instances to run on a single physical hardware
+increasing size of VM by adding CPUs->scale up,has limit
+adding the virtual machines->scale out,has no limit
+VM scale set->group of VMs grow and shrink in quantity based on predefined rule
+app services(web apps)->running code in the cloud,give the code azure will run it based in the configurations given,PaaS
+Container services->containers contain everything the app needs in container image
+Container services->Azure Container Instance,Azure Container Apps,Azure Kubernetes service
+ACI->single instance
+ACA->easy to use as a web service
+AKS->runs on a cluster of servers
+Azure virtual desktop->desktop version of windows which runs in cloud
+Azure functions->small pieces of code that run in cloud,cheapest way to run code in cloud,ex:doing some small tasks at frequent interval
+Virtual networking services->VNets,azure network over the globe
+subnets->Vnets are subdivided into subnets
+VMs connect to subnet through NIC cards
+Network security group->has Access control list, allows specified address to connect
+Peering->connecting two subnets together present on two different network which allows communication between VM on one network with VM on different network
+Azure DNS->Gives private IP address stored inside the DNS of Azure
+VPN Gateway->provides connection between two network
+VPN->P2S,S2S
+ExpressRoute->private connection between ISP and Azure endpoint,private connection between an organization’s on-premises infrastructure and Microsoft Azure data centers
+Public endpoints->who can access
+private endpoints->who can access,gives private connection facility
+

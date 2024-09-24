@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#comp-form{
+    border: 1px solid white;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+body{
+    /* background-color: blueviolet; */
+    /* background-image: linear-gradient(45deg,#004e91,#972dc1); */
+    background: linear-gradient(rgb(184, 11, 237),rgb(0, 183, 255));
+}
+
+h4{
+    margin-bottom: 0px;
+}
+
+#form-header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    font-weight: bolder;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* width: 700px; */
+}
+
+#name{
+    align-items: center;
+}
+#firstname,#lastname,#areacode,#phone{
+    color: rgb(194, 190, 190);
+}
+/* .default-option{
+    color: rgb(177, 175, 175);;
+} */
+#firstnametext,#lastnametext,#company,#email,#phonetext,#areacodetext,#subject{
+    background-color: rgb(214, 209, 209);
+}
+
+
+input[type=radio]#cust-yes,#cust-no{
+    accent-color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+#warningf,#warningl,#warninge{
+    color: red;
+}

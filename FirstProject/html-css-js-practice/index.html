@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with JavaScript</title>
+    <style>
+        .form-group {
+            display: flex;
+            gap: 10px; /* Space between input fields */
+            margin-bottom: 10px; /* Space below each form group */
+        }
+        .form-group label {
+            flex-basis: 30%; /* Width allocated for labels */
+            margin-bottom: 0; /* Remove extra space below labels */
+            display: flex;
+            align-items: center; /* Vertical alignment of label text */
+        }
+        .form-group input,
+        .form-group textarea {
+            flex: 1; /* Inputs and textareas grow to fill available space */
+            padding: 5px; /* Internal space within inputs and textareas */
+            margin: 0; /* Remove default margins */
+        }
+        .form-group textarea {
+            resize: vertical; /* Allow users to resize the textarea vertically only */
+        }
+        .error {
+            color: red; /* Error message color */
+            font-size: 0.9em; /* Slightly smaller text for error messages */
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname">
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <div id="formError" class="error"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            // Prevent form submission
+            event.preventDefault();
+
+            // Clear previous error messages
+            document.getElementById('formError').textContent = '';
+
+            // Get form field values
+            const firstname = document.getElementById('firstname').value.trim();
+            const lastname = document.getElementById('lastname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validate fields
+            let errors = [];
+            if (!firstname) errors.push('First Name is required.');
+            if (!lastname) errors.push('Last Name is required.');
+            if (!email) errors.push('Email Address is required.');
+            if (!phone) errors.push('Phone Number is required.');
+            if (!message) errors.push('Message is required.');
+
+            // Display errors if any
+            if (errors.length > 0) {
+                document.getElementById('formError').textContent = errors.join(' ');
+                return; // Exit function to prevent form submission
+            }
+
+            // If no errors, handle form submission (e.g., send data to server)
+            alert('Form submitted successfully!');
+            // You can use `fetch` or `XMLHttpRequest` to send data to a server
+        });
+    </script>
+</body>
+</html>

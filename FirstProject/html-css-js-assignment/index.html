@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Event Registration form</title>
+</head>
+<body>
+
+    <div class="container mt-3" id="form-header">
+        <h4>EVENT REGISTRATION FORM</h4>
+    </div>
+    <div class="container mb-5" id="comp-form">
+        <div class="fluid-container" id="form-div">
+            <form action="" id="registerform">
+                <div class="row mt-5 mb-4">
+                    <div class="col-4" id="name">
+                        <label for="Name" class="form-label" ><b>Name</b></label>                  
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="firstnametext" class="form-control" aria-label="First name" placeholder="First name" >
+                        <!-- <label for="firstname" class="form-text" id="firstname">First Name</label> -->
+                        <!-- <div id="firstnamewarn" style="color: red"></div> -->
+                        <p id="warningf" class="hidden">First name is required!</p>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="lastnametext"  aria-label="Last name" placeholder="Last name" >
+                        <!-- <label for="lasttname" class="form-text" id="lastname" >Last Name</label> -->
+                        <!-- <p id="lastnamewarn" style="color:red"></p> -->
+                        <p id="warningl" class="hidden">last name is required!</p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <label for="company" class="form-label" ><b>Company</b></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="company"  aria-label="Last name">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <label for="email" class="form-label" ><b>Email</b></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="email" class="form-control" id="email" >
+                        <!-- <p id="emailwarn" style="color:red"></p> -->
+                        <p id="warninge" class="hidden">email is required!</p>
+                    </div>
+                </div>
+                <div class="row mt-2 mb-4">
+                    <div class="col-4">
+                        <label for="phone" class="form-label" ><b>Phone</b></label>
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" id="areacodetext"  aria-label="Last name">
+                        <label for="areacode" class="form-text" id="areacode">Area Code</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="phonetext" >
+                        <label for="phone" class="form-text" id="phone">Phone Number</label>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-4">
+                        <label for="subject" class="form-label" ><b>Subject</b></label>
+                    </div>
+                    <div class="col-8">
+                        <select class="form-select" aria-label="Default select example" id="subject">
+                            <option class="default-option" selected>Choose option</option>
+                            <option value="Maths">Maths</option>
+                            <option value="Computer Science">Computer Science</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <p><b>Are you an existing customer?</b></p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-radio" type="radio" name="inlineRadioOptions" id="cust-yes" value="Yes"  checked>
+                            <label class="form-check-label" for="cust-yes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-radio" type="radio" name="inlineRadioOptions" id="cust-no" value="No">
+                            <label class="form-check-label" for="cust-no">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row  mt-4">
+                    <div class="col-6 mb-5">
+                        <button type="submit" class="btn btn-danger">REGISTER</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
